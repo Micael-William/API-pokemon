@@ -1,0 +1,95 @@
+#boxes-pokens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    width: 95vw;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+
+.images-poken{
+    border: 1px solid #3CD3AD;
+    box-shadow: 1px 1px 1px 1px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin: 10px 10px;
+    width: 100px;
+    padding: 10px;
+}
+
+.exp-poken {
+    border: 1px solid #3CD3AD;
+    background-color: #a55eea;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10%;
+    color: #fff;
+    margin: 10px 10px;  
+    height: 20vh;
+    /* padding: 10px; */
+
+}
+
+.container-poken{
+    background-color: #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 10%;
+    width: 10vw;
+    height: 31vh;
+    padding: 15px;
+
+}
+
+.fundo-poken {
+    background-color: #ffffff;
+    height: 15vh;
+    width: 10vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10%;
+}
+
+.exp-legenda{
+    color: #222;
+    background-color: #a55eea;
+}
+
+.numero-exp-poken {
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    /* margin:  0 5px; */
+}
+
+.exp{
+    background-color: #ff4757;
+}
+
+.nome-poken , .id {
+    font-weight: bold;
+    margin: 0 10px;
+    margin: 10px 10px;
+}
+
+.id{
+    background-color: #2ed573;
+    padding: 5px 10px;
+    border-radius: 10%;
+}
+
+.nome-poken{
+    font-size: 1.2rem;
+}
