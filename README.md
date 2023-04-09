@@ -31,9 +31,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <a href="http://www.instagram.com/wlliam_costa">
 <!--  <img style="border-radius: 50%;" src="" width="100px;" alt="Micael-William"/> -->
- <br />
+<!--  <br /> -->
  <sub><b>Micael William</b></sub></a> <a href="https://bit.ly/Linkedin-Micael-William" title="perfil">🚀</a>
- <br />
+<!--  <br /> -->
 
 [![Linkedin Badge](https://img.shields.io/badge/-Micael-William?style=flat-square&logo=Linkedin&logoColor=white&link=https://bit.ly/Linkedin-Micael-William)](https://bit.ly/Linkedin-Micael-William)
 [![Gmail Badge](https://img.shields.io/badge/-Micael-William?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mw931991@gmail.com)](mailto:mw931991@gmail.com)
