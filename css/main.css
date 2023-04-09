@@ -1,15 +1,23 @@
 
+@import url("/sass/mainBoxes.scss");
 @import url("/css/boxes.css");
 
 body{
-  background: url("/img/Sea\ Weed.jpg");
+  background: url("/img/fundo-pokemom.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+}
+
 .logo{
-  width: 18vw;
-  height: 15vh;
-  border-bottom: 1px solid #7bed9f;
+  width: 25vw;
+  height: 18vh;
   margin: 10px 0;
 }
 
@@ -17,7 +25,7 @@ main{
   width: 100vw;
   height: 35vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
@@ -30,21 +38,73 @@ form{
   height: 30vh;
 }
 
-input{
-  width: 16vw;
+.item{
+  width: 20vw;
   height: 5vh;
   outline: none;
-  font-size: 1.3rem;  
+  font-size: 1rem;  
   margin:  0 10px;
-  border: 0;
-  border-radius: 10%;
   font-family: Arial, Helvetica, sans-serif;
+  border: 0.4px solid #154580;
+  background-color: #154580;
 }
 
 .icone{
-  border-radius: 50%;
-  width: 40px;
-  height:40px;
+  border-radius: 100%;
+  width: 20px;
+  height:20px;
   border: 0;
-  /* background-color: #7bed9f; */
+  color: #000;
+}
+
+.btn {
+  /* background-image: linear-gradient(#041833, #154580); */
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  border: 0;
+  margin-top: 24px;
+  margin-right: 13px;
+  width: 5vw;
+  height: 4vh;
+  cursor: pointer;
+  background-color: blue;
+}
+
+body::-webkit-scrollbar {
+  width: 20px;             
+}
+
+body::-webkit-scrollbar-track {
+  background: orange;       
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blue;    
+  border-radius: 20px;      
+  border: 3px solid orange;  
+}
+
+.form-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.item {
+  width: 20vw;
+}
+
+.form-input .item {
+  margin-top: 10px;
+  padding:0 5px;
+  background-color: transparent;
+  border:none;
+  border-bottom: 1px solid #e1e1e1;
+  outline: none;
+  color: #fff;
+}
+
+.item::placeholder {
+  color: #fff;
 }

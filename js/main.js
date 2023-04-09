@@ -1,45 +1,49 @@
-const form = document.getElementById('tela');
+const form = document.getElementById('formulario');
 
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
-  const campo = evento.target["item"]
-  const item = campo.value;
+  const campoBuscaPokemon = evento.target["item"].value
+  
+  if(requisicao(campoBuscaPokemon)){
+    alert('Gerando Pokemon')
+  }
 
-  request(item);
+  const limparCampo = campoBuscaPokemon;
+  const verifica = campoBuscaPokemon ? limparCampo === "" : ''
+  return verifica
 
 })
 
 
-const view = document.getElementById('boxes-pokens');
+const mostrarPokemon = document.getElementById('boxes-pokens');
 const imagem = document.getElementById('img');
 
-async function request(item){
+async function requisicao(campoBuscaItemPokemon){
 
   try {
-    const url = `https://pokeapi.co/api/v2/pokemon/${item}/`;
+    const url = `https://pokeapi.co/api/v2/pokemon/${campoBuscaItemPokemon}/`;
     const api = await fetch(url);
-    const json = await api.json()
+    const data = await api.json()
+   
     const listaPokemon = [];
-    listaPokemon.push(json);
-
-    console.log(json) 
-
+    listaPokemon.push(data);
 
     listaPokemon.forEach(elemento => {
-      view.innerHTML += `
+      mostrarPokemon.innerHTML += `
+      <span class="campo-id">${elemento.id}</span>
       <div class="container-poken">
-        <img class="images-poken" src="${elemento.sprites.front_shiny}" alt="${elemento.name}">
-        
-        <div class="fundo-poken">
-          <p class="id">#${elemento.id}</p>
-          <p class="nome-poken"> ${elemento.name}</p>
-          <div class="exp-poken">
+      <span class="box-imagem"><img class="imagem-poken" src="${elemento.sprites.front_shiny}" alt="${elemento.name}"></span>
+      
+      <div class="fundo-poken">
+      <p class="nome-poken"> ${elemento.id}. ${elemento.name}</p>
+      <div class="exp-poken">
             <span class="numero-exp-poken exp-legenda">Experiência</span>
             <span class="numero-exp-poken exp">
               ${elemento.base_experience}
             </span>
           </div>
+          
         </div>
       </div>
     `;

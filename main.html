@@ -5,14 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
-  <title>lista - Pokemons</title>
+  <link rel="stylesheet" href="/sass/mainBoxes.scss">
+  <link rel="icon" href="">
+  <title>Pokedex</title>
 </head>
   <body>
     <main>
-      <h2><img  class="logo" src="/img/pokemon-png-logo.webp"></h2>
-      <form id="tela" action="#" method="post">
-        <input type="text" name="item" id="item" placeholder="Informe o nome do pokemon ou coloque o número">
-        <button type="submit"><img class="icone" src="/img/pesquisa (1).png"></button>
+      <form  id="formulario" action="#" method="post">
+        <h2><img  class="logo" src="/img/pokemon-png-logo.webp" alt="logo pokemon"></h2>
+        <div class="form-input">
+          <input  class="item" type="text" name="item" id="item" placeholder="Informe o nome do pokemon">
+          <button class="btn" type="submit">Gerar</button>
+        </div>
       </form>
     </main>
     <div id="boxes-pokens"></div>
