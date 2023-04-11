@@ -29,7 +29,7 @@ async function requisicao(campoBuscaItemPokemon){
     const listaPokemon = [];
     listaPokemon.push(data);
 
-    listaPokemon.forEach(elemento => {
+    listaPokemon.map(elemento => {
       mostrarPokemon.innerHTML += `
       <span class="campo-id">${elemento.id}</span>
       <div class="container-poken">
