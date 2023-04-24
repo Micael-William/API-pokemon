@@ -12,26 +12,7 @@
   text-transform: capitalize;
 }
 
-.imagem-poken{
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-}
-// 
-
-.container-poken:hover {
-  opacity: 0.9;
-  color:#fff;
-  background-color:#add8e6;
-
-  .box-imagem {
-    background-color: #add8e6;
-    border-radius: 100%;
-    cursor: pointer;
-  }
-}
-
-.container-poken{
+.container-poken {
   background-color: #adffab;
   cursor: pointer;
   display: flex;
@@ -45,8 +26,22 @@
   padding: 10px;
   transition: ease-in-out 1ms;
 }
-
-.fundo-poken {
+.container-poken:hover {
+  opacity: 0.9;
+  color: #fff;
+  background-color: #add8e6;
+}
+.container-poken:hover:hover .box-imagem {
+  background-color: #add8e6;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.container-poken .box-imagem .imagem-poken {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+.container-poken .fundo-poken {
   height: 13vh;
   width: 13vw;
   margin-top: 10px;
@@ -57,21 +52,20 @@
   transition: ease-in-out 0.4s;
   /* border: 0.4px solid #adffab; */
 }
-
-.exp-poken {
+.container-poken .fundo-poken .nome-poken {
+  font-size: 19px;
+  font-weight: bold;
+}
+.container-poken .fundo-poken .exp-poken {
   display: flex;
 }
-
-.exp-legenda {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.numero-exp-poken{
+.container-poken .fundo-poken .exp-poken .numero-exp-poken {
   margin-right: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
-
-.nome-poken {
-  font-size: 19px;
-  font-weight: bold;
+.container-poken .fundo-poken .exp-poken .exp-legenda {
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+/*# sourceMappingURL=style-pokemon.css.map */

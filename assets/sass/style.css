@@ -23,6 +23,7 @@
   color: #fff;
   background-color: #add8e6;
 }
+
 .container-poken:hover .box-imagem {
   background-color: #add8e6;
   border-radius: 100%;
@@ -73,4 +74,6 @@
 .nome-poken {
   font-size: 19px;
   font-weight: bold;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
