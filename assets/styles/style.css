@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  width: 400px;
+}
+
+form {
+  border: 1px solid #fff4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+}
+form h2 {
+  margin: 10px 30px;
+}
+form .btn {
+  cursor: pointer;
+  width: 4vw;
+  height: 3vh;
+}
+form .item {
+  width: 15vw;
+  height: 3vh;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+.container .container-poken {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #000;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background-image: url("/assets/img/fundo-pokemom.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0.7rem;
+  height: 27vh;
+  width: 10vw;
+  cursor: pointer;
+}
+.container .container-poken .box-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 75%;
+  height: 50%;
+}
+.container .container-poken .box-imagem .imagem-poken {
+  width: 100px;
+}
+.container .container-poken .fundo-poken {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 10px;
+  height: 9vh;
+  width: 8vw;
+  box-shadow: 1px 1px 1px 1px;
+}
+.container .container-poken .fundo-poken .nome-poken {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0;
+}
+.container .container-poken .fundo-poken .exp-poken {
+  display: flex;
+  align-items: center;
+}
+.container .container-poken .fundo-poken .exp-poken .numero-exp-poken {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container .container-poken .fundo-poken .exp-poken .exp {
+  margin: 0 10px;
+  padding: 0.2rem;
+  background-color: #7cfc00;
+  border-radius: 2px;
+}
+.container .container-poken .fundo-poken .exp-poken .exp-legenda {
+  padding: 0.2rem;
+  background-color: #ff6347;
+  border-radius: 2px;
+}/*# sourceMappingURL=style.css.map */

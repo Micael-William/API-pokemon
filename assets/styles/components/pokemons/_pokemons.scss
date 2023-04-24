@@ -1,0 +1,80 @@
+@import "./var";
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+
+    .container-poken {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border: $borda;
+        padding: .6rem;
+        border-radius: 10px;
+        background-image: url("/assets/img/fundo-pokemom.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: .7rem;
+        height: 27vh;
+        width: 10vw;
+        cursor: pointer;
+
+        .box-imagem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #fff;
+            width: 75%;
+            height: 50%;
+
+            .imagem-poken {
+                width: 100px;
+            }
+        }
+
+        .fundo-poken {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; 
+            background-color: #fff;
+            margin-top: 10px;
+            height: 9vh;
+            width: 8vw;
+            box-shadow: 1px 1px 1px 1px;
+            
+
+            .nome-poken {
+                font-family: $estilo-de-font;
+                margin: 10px 0;
+            }
+
+            .exp-poken {
+                display: flex;
+                align-items: center;
+
+                .numero-exp-poken {
+                    font-family: $estilo-de-font;
+                }
+
+                .exp {
+                    margin: 0 10px;
+                    padding: .2rem;
+                    background-color: #7cfc00;
+                    border-radius: 2px;
+                }
+
+                .exp-legenda {
+                    padding: .2rem;
+                    background-color: #ff6347;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}

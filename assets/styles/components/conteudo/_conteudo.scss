@@ -1,0 +1,32 @@
+@mixin estiloTitulo (){
+    h2 {
+        margin: 10px 30px;
+    }
+}
+
+form {
+    border: 1px solid #fff4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;   
+
+    @include estiloTitulo();
+
+    .btn {
+        cursor: pointer;
+        width: 4vw;
+        height: 3vh;
+
+    }
+
+    .item {
+        width: 15vw;
+        height: 3vh;
+        text-align: center;
+        border: none;
+        outline: none;
+       border-bottom: 1px solid #000;
+    }
+}

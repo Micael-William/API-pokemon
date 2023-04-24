@@ -3,21 +3,20 @@ const form = document.getElementById('formulario');
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
-  const campoBuscaPokemon = evento.target["item"].value
+  const campoBuscaPokemon = evento.target["item"]
+  const buscaPokemon = campoBuscaPokemon.value
   
-  if(requisicao(campoBuscaPokemon)){
+  if(requisicao(buscaPokemon)){
     alert('Gerando Pokemon')
   }
 
-  const limparCampo = campoBuscaPokemon;
-  const verifica = campoBuscaPokemon ? limparCampo === "" : ''
-  return verifica
+  const limparCampo = buscaPokemon  ? buscaPokemon == '' : '';
+  return limparCampo
 
 })
 
 
 const mostrarPokemon = document.getElementById('boxes-pokens');
-const imagem = document.getElementById('img');
 
 async function requisicao(campoBuscaItemPokemon){
 
@@ -31,7 +30,7 @@ async function requisicao(campoBuscaItemPokemon){
 
     listaPokemon.map(elemento => {
       mostrarPokemon.innerHTML += `
-      <span class="campo-id">${elemento.id}</span>
+     
       <div class="container-poken">
         <span class="box-imagem"><img class="imagem-poken" src="${elemento.sprites.front_shiny}" alt="${elemento.name}">
         </span>
@@ -46,7 +45,7 @@ async function requisicao(campoBuscaItemPokemon){
           </div>
           
         </div>
-      </div>
+      </div>    
     `;
     })
     
