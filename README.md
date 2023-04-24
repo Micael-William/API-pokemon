@@ -24,6 +24,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
 - **[JAVASCRIPT](https://www.javascript.com/)**
 - **[Sass](https://sass-lang.com/)**
+- **[API](https://pokeapi.co/)**
 
 
 
