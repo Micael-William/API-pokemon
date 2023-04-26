@@ -9,8 +9,9 @@
 - [x] Possibilidade de exibir os cards digitando número aleátorio que corresponde o id único do pokemon;
 
 ## 🎨 Layout
-![print-projeto2](https://user-images.githubusercontent.com/90733510/230801215-dd173898-db55-4f06-8cdf-4d3904225fbc.png)
 
+
+![Captura de tela 2023-04-26 162746](https://user-images.githubusercontent.com/90733510/234682350-380b5b5d-654e-4ba8-a5ce-f9bfc268afa9.png)
 
 
 
