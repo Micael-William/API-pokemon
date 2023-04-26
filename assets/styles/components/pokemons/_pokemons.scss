@@ -1,80 +1,148 @@
 @import "./var";
+@import "./media-pokemon";
 
 .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 50vh;
+
 
     .container-poken {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        border: $borda;
-        padding: .6rem;
         border-radius: 10px;
-        background-image: url("/assets/img/fundo-pokemom.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background-color: #F1F6F9;
+
+        width: 100px;
+        height: 100px;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
         margin: .7rem;
-        height: 27vh;
+        height: 29vh;
         width: 10vw;
+        box-shadow: 5px 1px 10px 1px;
         cursor: pointer;
+
+        &:hover {
+            transition: ease-in-out 0.6s;
+            height: 30vh;
+        }
+
+        .campo-id {
+            text-align: right;
+        }
 
         .box-imagem {
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            background-color: #fff;
-            width: 75%;
-            height: 50%;
+            background: #2acd97;
+            width: 10vw;
+            height: 27vh;
+            border-radius: 10px;
 
             .imagem-poken {
-                width: 100px;
+                width: 70px;
+                opacity: 30;
+
+                &:hover {
+                    transition: ease-in-out 1s;
+                    width: 90px;
+                }
             }
         }
 
         .fundo-poken {
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column; 
-            background-color: #fff;
-            margin-top: 10px;
-            height: 9vh;
-            width: 8vw;
-            box-shadow: 1px 1px 1px 1px;
-            
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 2px;
+            padding: 0.7rem;
+            height: 80%;
+            width: 10vw;
 
             .nome-poken {
-                font-family: $estilo-de-font;
                 margin: 10px 0;
+                font-family: $estilo-de-font;
+                text-transform: capitalize;
+                font-weight: bold;
+                font-size: 1.4rem;
             }
 
             .exp-poken {
                 display: flex;
                 align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+
 
                 .numero-exp-poken {
                     font-family: $estilo-de-font;
                 }
 
                 .exp {
-                    margin: 0 10px;
                     padding: .2rem;
-                    background-color: #7cfc00;
-                    border-radius: 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 30px;
+
+                    font-family: $estilo-de-font;
+
+                    .tipo-exp {
+                        padding: 4px 10px;
+                        text-transform: capitalize;
+                        font-family: $estilo-de-font;
+                    }
+
+                    .tipo {
+                        background-color: #D3756B;
+                        padding: 5px;
+                        margin: 0 15px;
+                        width: 4.3rem;
+                        text-align: center;
+                        text-transform: capitalize;
+                        font-family: $estilo-de-font;
+
+
+                    }
                 }
+
 
                 .exp-legenda {
                     padding: .2rem;
-                    background-color: #ff6347;
-                    border-radius: 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $estilo-de-font;
+                    margin-top: 10px;
+
+                    .tipo-legenda {
+                        padding: 4px 10px;
+                        text-transform: capitalize;
+                        font-family: $estilo-de-font;
+                    }
+
+                    .tipo {
+                        background-color: #03C988;
+                        padding: 4px 10px;
+                        margin: 0 10px;
+                        font-family: $estilo-de-font;
+                        width: 3rem;
+                        text-align: center;
+                    }
                 }
             }
         }
     }
+
+
 }
+
+
+
+@include resolucao()

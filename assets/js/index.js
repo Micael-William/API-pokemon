@@ -1,59 +1,64 @@
-const form = document.getElementById('formulario');
-
-form.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-
-  const campoBuscaPokemon = evento.target["item"]
-  const buscaPokemon = campoBuscaPokemon.value
-  
-  if(requisicao(buscaPokemon)){
-    alert('Gerando Pokemon')
-  }
-
-  const limparCampo = buscaPokemon  ? buscaPokemon == '' : '';
-  return limparCampo
-
-})
-
-
 const mostrarPokemon = document.getElementById('boxes-pokens');
+const input = document.getElementById('item')
+const botao = document.getElementById('botao')
 
-async function requisicao(campoBuscaItemPokemon){
-
-  try {
-    const url = `https://pokeapi.co/api/v2/pokemon/${campoBuscaItemPokemon}/`;
-    const api = await fetch(url);
-    const data = await api.json()
-   
-    const listaPokemon = [];
-    listaPokemon.push(data);
-
-    listaPokemon.map(elemento => {
-      mostrarPokemon.innerHTML += `
-     
-      <div class="container-poken">
-        <span class="box-imagem"><img class="imagem-poken" src="${elemento.sprites.front_shiny}" alt="${elemento.name}">
-        </span>
-      
-       <div class="fundo-poken">
-          <p class="nome-poken"> ${elemento.id}. ${elemento.name}</p>
-          <div class="exp-poken">
-            <span class="numero-exp-poken exp-legenda">Experiência</span>
-            <span class="numero-exp-poken exp">
-              ${elemento.base_experience}
-            </span>
-          </div>
-          
-        </div>
-      </div>    
-    `;
-    })
-    
-    
-    
-  } catch (error) {
-    if(error){
-      alert("Pokemon não encontrado...")
-    }
+// const valor = 20
+function chamar(valor){
+  const valorInput = input.value
+  for(let i = 0; i < valorInput ; i++){
+    criarConexao(i)
   }
 }
+
+async function criarConexao(pokemon) {
+  const api = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+  const url = await fetch(api)
+  const data = await url.json()
+  criaElemento(data)
+}
+
+const colors = {
+  black: '#272727',
+  white: '#FFFFFF',
+  grey: '#919191',
+  lightGrey: '#E7E7E8',
+  semiGrey: '#F4F5F4',
+  red: '#FA6555',
+  green: '#41D168',
+  blue: '#0055D4',
+  lilac: '#6C79DB',
+}
+function criaElemento(poke){
+  // style="${poke['types'][0]['type']['name'] === "grass" ? `background-color=${colors.green}` : "não"}"
+
+  mostrarPokemon.innerHTML += `
+    <div class="container-poken" >
+    <span class="campo-id"></span>
+      <span class="box-imagem">
+       <img class="imagem-poken" src="${poke['sprites']
+       ['versions']
+       ['generation-v']
+       ['black-white']
+       ['animated']
+       ['front_default']}" alt="${poke['name']}">
+      </span>
+    
+      <div class="fundo-poken">
+      <span class="nome-poken"> ${poke['id']}  ${poke['name']}</span>
+     
+        <div class="exp-poken">
+          <span class="numero-exp-poken exp-legenda"> <span class="tipo-legenda">Experiência</span> <span class="tipo"> ${poke['base_experience']} </span>
+           </span>
+          <span class="numero-exp-poken exp">
+           <span class="tipo-exp ">Tipo</span> <span class="tipo"> ${poke['types'][0]['type']['name']} </span>
+          </span>
+        </div>
+          
+      </div>
+    </div>
+  `;  
+}
+// chamar(150)
+
+botao.addEventListener('click', chamar)
+

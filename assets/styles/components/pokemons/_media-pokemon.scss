@@ -1,0 +1,171 @@
+@mixin resolucao() {
+    @media (max-width: 1730px) {
+        .container {
+            justify-content: center;
+            height: 70vh;
+            flex-wrap: wrap;
+            margin: 20px 0;
+
+            .container-poken {
+                justify-content: center;
+                flex-direction: column;
+                height: 35vh;
+                width: 10vw;
+
+              
+
+                .box-imagem {
+                    justify-content: center;
+                    flex-direction: column;
+                    .imagem-poken {
+                        width: 50px;
+                    }
+                }
+
+                .fundo-poken {
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 80%;
+                    width: auto;
+
+                    .nome-poken {
+                        font-size: 14px;
+                        margin: 5px 0;
+                        font-family: $estilo-de-font;
+                        text-transform: capitalize;
+                    }
+
+                    .exp-poken {
+                        justify-content: center;
+                        flex-direction: column;
+
+                        .exp {
+                            padding: 1rem;
+                            justify-content: center;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .tipo-exp {
+                                padding: 4px;
+                            }
+
+                            .tipo {
+                                padding: 3px;
+                                margin: 0 15px;
+                                width: 4.3rem;
+                                text-align: center;
+                            }
+                        }
+
+                        .exp-legenda {
+                            justify-content: center;
+                            flex-direction: column;
+
+                            .tipo-legenda {
+                                padding: 5px;
+                            }
+                            .tipo {
+                                padding: 3px;
+                                margin: 0 5px;
+                                width: 4.1rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    @media (max-width: 1000px){
+        .container {
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 40vh;
+
+            .container-poken  {
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 36vh;
+                width: 16vw;
+                
+                .box-imagem {
+                    justify-content: center;
+                    width: 16vw;
+                    height: 20vh;
+
+                    .imagem-poken {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 780px) {
+        .container {
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 30vh;
+
+            .container-poken {
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 30vh;
+                width: 26vw;
+
+                .box-imagem {
+                    justify-content: center;
+                    width: 26vw;
+                    height: 22vh;
+
+                    .imagem-poken {
+                        width: 60px;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    @media (max-width: 350px){
+        .container {
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 40vh;
+
+            .container-poken {
+                justify-content: center;
+                align-items: center;
+                flex-direction: column ;
+                height: 35vh;
+                width: 38vw;
+
+                .box-imagem {
+                    justify-content: center;
+                    align-items: center;
+                    width: 38vw;
+                    height: 34vh;
+
+                    .imagem-poken {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 800px) {
+        main {
+            justify-content: space-between;
+            width: 100%;
+            padding: 3rem;
+        }
+    }
+}
